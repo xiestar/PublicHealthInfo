@@ -21,8 +21,8 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^PublicHealth/$', listHealthInfos),
     url(r'^PublicHealth/overview.html', listHealthInfos),  
-    url(r'^PublicHealth/compare-indicator.html', CompareIndicatorInfos),
+    url(r'^PublicHealth/.*compare-indicator.html', CompareIndicatorInfos),
     url(r'^PublicHealth/map.html', MapHealthInfos),
-    url(r'^PublicHealth/static/resources/reload.html', listHealthInfos),
+  #  url(r'^PublicHealth/static/resources/reload.html', listHealthInfos),
 
 ]

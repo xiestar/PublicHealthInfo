@@ -4,7 +4,7 @@ from django.shortcuts import render_to_response
 
 # function for list a table of all health informaiton.
 def listHealthInfos(request):
-    t = loader.get_template('all-health-table.html')
+	t = loader.get_template('all-health-table.html')
     c = Context({'healths': 'healths'})
     return HttpResponse(t.render(c))
 # function for comparing health indicator.
