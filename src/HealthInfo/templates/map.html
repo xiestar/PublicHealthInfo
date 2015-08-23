@@ -1,0 +1,603 @@
+﻿{% load staticfiles %}
+<html>
+  <head>
+    <title>map</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+     <link href="{% static "resources/css/jquery-ui-themes.css" %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static "resources/css/axure_rp_page.css" %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static "data/styles.css" %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static "files/overview/styles.css" %}" type="text/css" rel="stylesheet"/>
+    <script src="{% static "resources/scripts/jquery-1.7.1.min.js" %}"></script>
+    <script src="{% static "resources/scripts/jquery-ui-1.8.10.custom.min.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/axQuery.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/globals.js" %}"></script>
+    <script src="{% static "resources/scripts/axutils.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/annotation.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/axQuery.std.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/doc.js" %}"></script>
+    <script src="{% static "data/document.js" %}"></script>
+    <script src="{% static "resources/scripts/messagecenter.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/events.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/action.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/expr.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/geometry.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/flyout.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/ie.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/model.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/repeater.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/sto.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/utils.temp.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/variables.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/drag.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/move.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/visibility.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/style.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/adaptive.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/tree.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/init.temp.js" %}"></script>
+    <script src="{% static "files/overview/data.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/legacy.js" %}"></script>
+    <script src="{% static "resources/scripts/axure/viewer.js" %}"></script>
+     <script type="text/javascript" src="{% static "resources/d3/d3.js" %}"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return '{% static 'resources/images/transparent.gif' %}'; };
+      $axure.utils.getOtherPath = function() { return '{% static 'resources/Other.html' %}'; };
+      $axure.utils.getReloadPath = function() { return '{% static 'resources/reload.html' %}'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (M Global Header) -->
+
+      <!-- Header (Flow Shape) -->
+      <div id="u1" class="ax_flow_shape" data-label="Header">
+        <img id="u1_img" class="img " src="{% static "images/overview/header_u1.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u2" class="text">
+          <p><span>Header</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Flow Shape) -->
+      <div id="u3" class="ax_flow_shape">
+        <img id="u3_img" class="img " src="{% static "images/overview/u3.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u4" class="text">
+          <!-- <p><span>地图</span></p> -->
+          <p><span>{% block title %}{% endblock %}</span></p>
+    
+        </div>
+      </div>
+
+      <!-- Unnamed (M Global Footer) -->
+
+      <!-- Footer (Flow Shape) -->
+      <div id="u6" class="ax_flow_shape" data-label="Footer">
+        <img id="u6_img" class="img " src="{% static "images/overview/footer_u6.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u7" class="text">
+          <p><span>Footer</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (M Global Navigation) -->
+
+      <!-- OverView (Shape) -->
+      <div id="u9" class="ax_shape" data-label="OverView">
+        <img id="u9_img" class="img " src="{% static "images/overview/overview_u9.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u10" class="text">
+          <p><span>概览</span></p>
+        </div>
+      </div>
+
+      <!-- OverView (Shape) [footnote] -->
+      <div id="u9_ann" class="annotation"></div>
+
+      <!-- Compare Indicator (Shape) -->
+      <div id="u11" class="ax_shape" data-label="Compare Indicator">
+        <img id="u11_img" class="img " src="{% static "images/overview/overview_u9.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u12" class="text">
+          <p><span>指标比较</span></p>
+        </div>
+      </div>
+
+      <!-- Compare Indicator (Shape) [footnote] -->
+      <div id="u11_ann" class="annotation"></div>
+
+      <!-- Map (Shape) -->
+      <div id="u13" class="ax_shape" data-label="Map">
+        <img id="u13_img" class="img " src="{% static "images/overview/overview_u9.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u14" class="text">
+          <p><span>地图</span></p>
+        </div>
+      </div>
+
+      <!-- Map (Shape) [footnote] -->
+      <div id="u13_ann" class="annotation"></div>
+
+      <!-- Trends (Shape) -->
+      <div id="u15" class="ax_shape" data-label="Trends">
+        <img id="u15_img" class="img " src="{% static "images/overview/overview_u9.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u16" class="text">
+          <p><span>趋势</span></p>
+        </div>
+      </div>
+
+      <!-- Trends (Shape) [footnote] -->
+      <div id="u15_ann" class="annotation"></div>
+
+      <!-- Compare areas (Shape) -->
+      <div id="u17" class="ax_shape" data-label="Compare areas">
+        <img id="u17_img" class="img " src="{% static "images/overview/overview_u9.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u18" class="text">
+          <p><span>区域比较</span></p>
+        </div>
+      </div>
+
+      <!-- Compare areas (Shape) [footnote] -->
+      <div id="u17_ann" class="annotation"></div>
+
+      <!-- Area profiles (Shape) -->
+      <div id="u19" class="ax_shape" data-label="Area profiles">
+        <img id="u19_img" class="img " src="{% static "images/overview/overview_u9.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u20" class="text">
+          <p><span>区域指标</span></p>
+        </div>
+      </div>
+
+      <!-- Area profiles (Shape) [footnote] -->
+      <div id="u19_ann" class="annotation"></div>
+
+      <!-- Download (Shape) -->
+      <div id="u21" class="ax_shape" data-label="Download">
+        <img id="u21_img" class="img " src="{% static "images/overview/overview_u9.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u22" class="text">
+          <p><span>下载</span></p>
+        </div>
+      </div>
+
+      <!-- Download (Shape) [footnote] -->
+      <div id="u21_ann" class="annotation"></div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u23" class="ax_shape">
+        <img id="u23_img" class="img " src="{% static "images/overview/u23.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u24" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u25" class="ax_shape">
+        <img id="u25_img" class="img " src="{% static "images/overview/u25.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u26" class="text">
+          <p><span>Better</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u27" class="ax_shape">
+        <img id="u27_img" class="img " src="{% static "images/overview/u25.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u28" class="text">
+          <p><span>Similar</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u29" class="ax_shape">
+        <img id="u29_img" class="img " src="{% static "images/overview/u25.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u30" class="text">
+          <p><span>Worse</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u31" class="ax_shape">
+        <img id="u31_img" class="img " src="{% static "images/overview/u25.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u32" class="text">
+          <p><span>Lower</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u33" class="ax_shape">
+        <img id="u33_img" class="img " src="{% static "images/overview/u25.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u34" class="text">
+          <p><span>Similar</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u35" class="ax_shape">
+        <img id="u35_img" class="img " src="{% static "images/overview/u25.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u36" class="text">
+          <p><span>Higher</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u37" class="ax_shape">
+        <img id="u37_img" class="img " src="{% static "images/overview/u37.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u38" class="text">
+          <p><span>Not Compared</span></p>
+        </div>
+      </div>
+
+      <!-- DP Indicators (Dynamic Panel) -->
+      <div id="u39" class="ax_dynamic_panel" data-label="DP Indicators">
+        <div id="u39_state0" class="panel_state" data-label="S OverView">
+          <div id="u39_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (Shape) -->
+            <div id="u40" class="ax_shape">
+              <img id="u40_img" class="img " src="{% static "images/overview/u40.png" %}"/>
+              <!-- Unnamed () -->
+              <div id="u41" class="text">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Shape) -->
+            <div id="u42" class="ax_paragraph">
+              <img id="u42_img" class="img " src="{% static "resources/images/transparent.gif" %}"/>
+              <!-- Unnamed () -->
+              <div id="u43" class="text">
+                <p><span>指标</span><span>：</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Droplist) -->
+            <div id="u44" class="ax_droplist">
+              <select id="u44_input">
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u39_state1" class="panel_state" data-label="S Compare Indicators">
+          <div id="u39_state1_content" class="panel_state_content">
+
+            <!-- Unnamed (Shape) -->
+            <div id="u45" class="ax_shape">
+              <img id="u45_img" class="img " src="{% static "images/overview/u40.png" %}"/>
+              <!-- Unnamed () -->
+              <div id="u46" class="text">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Shape) -->
+            <div id="u47" class="ax_paragraph">
+              <img id="u47_img" class="img " src="{% static "resources/images/transparent.gif" %}"/>
+              <!-- Unnamed () -->
+              <div id="u48" class="text">
+                <p><span>指标</span><span>：</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Droplist) -->
+            <div id="u49" class="ax_droplist">
+              <select id="u49_input">
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u39_state2" class="panel_state" data-label="S Map">
+          <div id="u39_state2_content" class="panel_state_content">
+          </div>
+        </div>
+        <div id="u39_state3" class="panel_state" data-label="S Trend">
+          <div id="u39_state3_content" class="panel_state_content">
+          </div>
+        </div>
+        <div id="u39_state4" class="panel_state" data-label="S Compare Areas">
+          <div id="u39_state4_content" class="panel_state_content">
+          </div>
+        </div>
+        <div id="u39_state5" class="panel_state" data-label="S Area Profile">
+          <div id="u39_state5_content" class="panel_state_content">
+          </div>
+        </div>
+        <div id="u39_state6" class="panel_state" data-label="S Download">
+          <div id="u39_state6_content" class="panel_state_content">
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (M Global Parameters) -->
+
+      <!-- Unnamed (Shape) -->
+      <div id="u51" class="ax_shape">
+        <img id="u51_img" class="img " src="{% static "images/overview/u51.png" %}"/>
+        <!-- Unnamed () -->
+        <div id="u52" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Area Group (Droplist) -->
+      <div id="u53" class="ax_droplist" data-label="Area Group">
+        <select id="u53_input">
+          <option selected value="--选择区域分组--">--选择区域分组--</option>
+          <option value="行政划分">行政划分</option>
+          <option value="功能划分">功能划分</option>
+          <option value="方位划分">方位划分</option>
+        </select>
+      </div>
+
+      <!-- Sex (Droplist) -->
+      <div id="u54" class="ax_droplist" data-label="Sex">
+        <select id="u54_input">
+          <option selected value="--选择性别--">--选择性别--</option>
+          <option value="全部">全部</option>
+          <option value="男">男</option>
+          <option value="女">女</option>
+        </select>
+      </div>
+
+      <!-- Age (Droplist) -->
+      <div id="u55" class="ax_droplist" data-label="Age">
+        <select id="u55_input">
+          <option selected value="--选择年龄--">--选择年龄--</option>
+          <option value="全部">全部</option>
+          <option value="14~64">14~64</option>
+          <option value="&gt; 64">&gt; 64</option>
+        </select>
+      </div>
+
+      <!-- Period (Droplist) -->
+      <div id="u56" class="ax_droplist" data-label="Period">
+        <select id="u56_input">
+          <option selected value="--选择时间--">--选择时间--</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+        </select>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u57" class="ax_paragraph">
+        <img id="u57_img" class="img " src="{% static "resources/images/transparent.gif" %}"/>
+        <!-- Unnamed () -->
+        <div id="u58" class="text">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- DP Area Type (Dynamic Panel) -->
+      <div id="u59" class="ax_dynamic_panel" data-label="DP Area Type">
+        <div id="u59_state0" class="panel_state" data-label="State 默认">
+          <div id="u59_state0_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u60" class="ax_droplist" data-label="区域类型">
+              <select id="u60_input">
+                <option selected value="--选择区域类型--">--选择区域类型--</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u59_state1" class="panel_state" data-label="State 行政">
+          <div id="u59_state1_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u61" class="ax_droplist" data-label="区域类型">
+              <select id="u61_input">
+                <option selected value="--无--">--无--</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u59_state2" class="panel_state" data-label="State 功能">
+          <div id="u59_state2_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u62" class="ax_droplist" data-label="区域类型">
+              <select id="u62_input">
+                <option selected value="--选择区域类型--">--选择区域类型--</option>
+                <option value="首都功能核心区">首都功能核心区</option>
+                <option value="城市功能拓展区">城市功能拓展区</option>
+                <option value="城市发展新区">城市发展新区</option>
+                <option value="生态涵养区">生态涵养区</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u59_state3" class="panel_state" data-label="State 方位">
+          <div id="u59_state3_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u63" class="ax_droplist" data-label="区域类型">
+              <select id="u63_input">
+                <option selected value="--选择区域类型--">--选择区域类型--</option>
+                <option value="中心城区">中心城区</option>
+                <option value="东部城区">东部城区</option>
+                <option value="西部城区">西部城区</option>
+                <option value="南部城区">南部城区</option>
+                <option value="北部城区">北部城区</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DP Area (Dynamic Panel) -->
+      <div id="u64" class="ax_dynamic_panel" data-label="DP Area">
+        <div id="u64_state0" class="panel_state" data-label="State 默认">
+          <div id="u64_state0_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u65" class="ax_droplist" data-label="区域类型">
+              <select id="u65_input">
+                <option selected value="--选择区域--">--选择区域--</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u64_state1" class="panel_state" data-label="State 首都功能核心区">
+          <div id="u64_state1_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u66" class="ax_droplist" data-label="区域类型">
+              <select id="u66_input">
+                <option selected value="东城区">东城区</option>
+                <option value="西城区">西城区</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u64_state2" class="panel_state" data-label="State 城市功能拓展区">
+          <div id="u64_state2_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u67" class="ax_droplist" data-label="区域类型">
+              <select id="u67_input">
+                <option selected value="朝阳区">朝阳区</option>
+                <option value="海淀区">海淀区</option>
+                <option value="丰台区">丰台区</option>
+                <option value="石景山区">石景山区</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u64_state3" class="panel_state" data-label="State 城市发展新区">
+          <div id="u64_state3_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u68" class="ax_droplist" data-label="区域类型">
+              <select id="u68_input">
+                <option selected value="通州区">通州区</option>
+                <option value="大兴区">大兴区</option>
+                <option value="顺义区">顺义区</option>
+                <option value="昌平区">昌平区</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u64_state4" class="panel_state" data-label="State 生态涵养区">
+          <div id="u64_state4_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u69" class="ax_droplist" data-label="区域类型">
+              <select id="u69_input">
+                <option selected value="怀柔区">怀柔区</option>
+                <option value="房山区">房山区</option>
+                <option value="平谷区">平谷区</option>
+                <option value="门头沟">门头沟</option>
+                <option value="延庆县">延庆县</option>
+                <option value="密云县">密云县</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u64_state5" class="panel_state" data-label="State 中心城区">
+          <div id="u64_state5_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u70" class="ax_droplist" data-label="区域类型">
+              <select id="u70_input">
+                <option selected value="东城区">东城区</option>
+                <option value="西城区">西城区</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u64_state6" class="panel_state" data-label="State 东部城区">
+          <div id="u64_state6_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u71" class="ax_droplist" data-label="区域类型">
+              <select id="u71_input">
+                <option selected value="朝阳区">朝阳区</option>
+                <option value="通州区">通州区</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u64_state7" class="panel_state" data-label="State 西部城区">
+          <div id="u64_state7_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u72" class="ax_droplist" data-label="区域类型">
+              <select id="u72_input">
+                <option selected value="海淀区">海淀区</option>
+                <option value="石景山区">石景山区</option>
+                <option value="丰台区">丰台区</option>
+                <option value="门头沟">门头沟</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u64_state8" class="panel_state" data-label="State 南部城区">
+          <div id="u64_state8_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u73" class="ax_droplist" data-label="区域类型">
+              <select id="u73_input">
+                <option selected value="房山区">房山区</option>
+                <option value="大兴区">大兴区</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u64_state9" class="panel_state" data-label="State 北部城区">
+          <div id="u64_state9_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u74" class="ax_droplist" data-label="区域类型">
+              <select id="u74_input">
+                <option selected value="怀柔区">怀柔区</option>
+                <option value="平谷区">平谷区</option>
+                <option value="昌平区">昌平区</option>
+                <option value="顺义区">顺义区</option>
+                <option value="密云县">密云县</option>
+                <option value="延庆县">延庆县</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="u64_state10" class="panel_state" data-label="State 行政">
+          <div id="u64_state10_content" class="panel_state_content">
+
+            <!-- 区域类型 (Droplist) -->
+            <div id="u75" class="ax_droplist" data-label="区域类型">
+              <select id="u75_input">
+                <option selected value="东城区">东城区</option>
+                <option value="怀柔区">怀柔区</option>
+                <option value="平谷区">平谷区</option>
+                <option value="昌平区">昌平区</option>
+                <option value="顺义区">顺义区</option>
+                <option value="密云县">密云县</option>
+                <option value="延庆县">延庆县</option>
+                <option value="西城区">西城区</option>
+                <option value="朝阳区">朝阳区</option>
+                <option value="石景山区">石景山区</option>
+                <option value="房山区">房山区</option>
+                <option value="通州区">通州区</option>
+                <option value="海淀区">海淀区</option>
+                <option value="丰台区">丰台区</option>
+                <option value="门头沟">门头沟</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

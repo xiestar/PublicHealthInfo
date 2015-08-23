@@ -1,0 +1,20 @@
+{% extends "compare-indicator.html" %}  
+{% block mainContent %}  
+   <table border="2">
+     <tr>
+       <th bgcolor="grey">所属城区</th>
+       <th bgcolor="grey">血压</th>
+       <th>心率</th>
+       <th>BMI</th>
+       <th>血糖</th>
+     </tr>
+     {% for health in healths  %}  
+     <tr>
+       <td>{{ health.areaname }}</td>
+       <td>{{ health.bloodpressure }}</td>
+       <td>{{ health.heartrate }}</td>
+       <td>{{ health.BMI }}</td>
+       <td>{{ health.bloodsugar }}</td>  
+     </tr>
+     {% endfor %}  
+{% endblock %}
